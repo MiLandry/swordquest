@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "**/*.meta": true,
+    "Assets/scripts/**/*.meta": true,
+    "Assets/scripts/ItemDragHandler.cs.meta": true
+  }
+}
