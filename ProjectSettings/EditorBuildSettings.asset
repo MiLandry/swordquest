@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Boot.unity
+    guid: be03087012931466cac49bacd5e1ed1f
+  - enabled: 1
+    path: Assets/Scenes/PartySelection.unity
+    guid: 1bb2fc8b7a7934ce590b9012b146be00
+  - enabled: 1
+    path: Assets/Scenes/StrategicMap.unity
+    guid: 6a8424f18537540a28dcd4280729483f
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: 6c5b3204181874084b75949af64eb08f
   m_configObjects: {}
