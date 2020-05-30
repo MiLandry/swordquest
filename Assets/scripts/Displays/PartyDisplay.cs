@@ -22,8 +22,8 @@ public class PartyDisplay : MonoBehaviour
         GridLayoutGroup grid = container.GetComponent(typeof(GridLayoutGroup)) as GridLayoutGroup;
         GameObject display = Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
 
-        //this.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
-        //this.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "42";
+        display.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
+        display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.hp.ToString();
 
         //display.GetComponent<UnityEngine.UI.Text>().text = hero.name;
 
