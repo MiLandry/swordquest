@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class PartyDisplay : MonoBehaviour
 {
-    public Party_SO party;
+    //public Party_SO party;
+    private Party_SO party;
 
     public Text partyName;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject heroInformationDisplay;
 
-    public void addHero(Hero_SO hero)
+    private void addHero(Hero_SO hero)
     {
         Debug.Log(this);
         Debug.Log(hero);
@@ -39,6 +40,7 @@ public class PartyDisplay : MonoBehaviour
 
     private void Start()
     {
+        party = PartyManager.party;
 
         //icon.sprite = party.theSprite;
         Debug.Log(party.partyName);

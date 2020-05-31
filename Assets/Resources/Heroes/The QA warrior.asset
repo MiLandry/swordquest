@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69bc3191670bd4e7a8628220b8643fed, type: 3}
-  m_Name: Nigel Planter
+  m_Name: The QA warrior
   m_EditorClassIdentifier: 
-  name: Nigel Planter
-  hp: 4
-  gClass: {fileID: 11400000, guid: 5ef63992a62fd4f9a85644ed32b9cc9d, type: 2}
+  name: QA the Quarrior warrio
+  hp: -99
+  gClass: {fileID: 11400000, guid: 0ddd6108899354527a36b148a45cca33, type: 2}

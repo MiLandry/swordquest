@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: WarriorParty
   m_EditorClassIdentifier: 
   heroes:
-  - {fileID: 11400000, guid: 6303e24d9854a4e5e91612e137294e88, type: 2}
+  - {fileID: 11400000, guid: f7224f7a0b74d4d4d86cf5ef7f733f91, type: 2}
   theSprite: {fileID: 21300000, guid: 883b871fd1d51454a8c429b085190938, type: 3}
+  partyName: The warrior party

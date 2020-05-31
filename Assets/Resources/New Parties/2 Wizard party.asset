@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8de42df4fa5514ed9a22e074a7f3dfbd, type: 2}
   - {fileID: 11400000, guid: e738ea54d361348c199355d8fa7c8a8d, type: 2}
   theSprite: {fileID: 21300000, guid: d1d974af682b3d94ba855f3462e7d7bd, type: 3}
+  partyName: The Hufflepuffs
