@@ -13,6 +13,13 @@ public class PartyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (party == null)
+        {
+            Party_SO testParty = Resources.Load<Party_SO>("TestData/TestParty");
+            party = testParty;
+
+        }
+
 
     }
 }
