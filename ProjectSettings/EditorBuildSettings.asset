@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/PartySelection.unity
     guid: 1bb2fc8b7a7934ce590b9012b146be00
   - enabled: 1
-    path: Assets/Scenes/StrategicMap.unity
+    path: Assets/StrategicModule/Strategic.unity
     guid: 6a8424f18537540a28dcd4280729483f
   - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 6c5b3204181874084b75949af64eb08f
+  - enabled: 1
+    path: Assets/ModuleDungeon/Dungeon.unity
+    guid: 3b732a805c68c486ab154608d5378f27
   m_configObjects: {}

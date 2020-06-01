@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class Game : Singleton<Game>
 {
     //currentScene;
     // load and unload game levels
@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>
     // you would have maually and and remove on the defined callbacks below
 
     //singleton
-    private static GameManager instance;
+    private static Game instance;
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
 
         DontDestroyOnLoad(gameObject);
         _loadOperations = new List<AsyncOperation>();
-        LoadLevel("StartScreen");
+        //LoadLevel("StartScreen");
     }
 
     private string _currentLevelName = string.Empty;
@@ -68,7 +68,7 @@ public class GameManager : Singleton<GameManager>
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to load level " + levelName);
+            Debug.LogError("[Game] Unable to load level " + levelName);
             return;
         }
         _currentLevelName = levelName;
@@ -81,7 +81,7 @@ public class GameManager : Singleton<GameManager>
         AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to unload level " + levelName);
+            Debug.LogError("[Game] Unable to unload level " + levelName);
             return;
         }
         ao.completed += OnUnloadOperationComplete;
@@ -90,19 +90,6 @@ public class GameManager : Singleton<GameManager>
 
 
 
-
-    //private void LoadLevel(string levelName)
-    //{
-    //    AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
-    //    if (ao == null)
-    //    {
-    //        Debug.LogError("[GameManager] Unable to load level " + levelName);
-    //        return;
-    //    }
-    //    ao.completed += OnLoadOperationComplete;
-
-    //    currentLevelName = levelName;
-    //}
 
 
 }

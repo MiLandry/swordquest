@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class PartyDisplay : MonoBehaviour
 {
-    //public Party_SO party;
-    private Party_SO party;
 
+    private Party_SO party;
     public Text partyName;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
+    //it should already be bundled with the prefab
     public GameObject heroInformationDisplay;
 
     private void addHero(Hero_SO hero)
@@ -24,7 +24,9 @@ public class PartyDisplay : MonoBehaviour
         GameObject display = Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
 
         display.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
-        display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.hp.ToString();
+        display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + hero.hp.ToString();
+        display.transform.Find("gclass").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.gClass.name;
+        display.transform.Find("Character art").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = hero.icon;
 
         //display.GetComponent<UnityEngine.UI.Text>().text = hero.name;
 
@@ -53,8 +55,6 @@ public class PartyDisplay : MonoBehaviour
             //Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
         }
 
-        // loop through party.heroes, create a game object or prefab for Each.
-        //party.heroes
 
     }
 
