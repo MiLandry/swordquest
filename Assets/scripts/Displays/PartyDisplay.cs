@@ -15,11 +15,7 @@ public class PartyDisplay : MonoBehaviour
 
     private void addHero(Hero_SO hero)
     {
-        Debug.Log(this);
-        Debug.Log(hero);
-        Debug.Log(heroInformationDisplay);
         GameObject container = this.transform.Find("Hero container").gameObject;
-        Debug.Log(container);
         GridLayoutGroup grid = container.GetComponent(typeof(GridLayoutGroup)) as GridLayoutGroup;
         GameObject display = Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
 
@@ -45,26 +41,17 @@ public class PartyDisplay : MonoBehaviour
         party = PartyManager.party;
 
         //icon.sprite = party.theSprite;
-        Debug.Log(party.partyName);
         partyName.text = party.partyName;
         foreach (Hero_SO hero in party.heroes) // Loop through List with foreach
         {
-            //Console.WriteLine(item);
-            //Debug.Log(hero);
             addHero(hero);
-            //Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
+
         }
 
 
     }
 
-    //public void OnPartyClick()
-    //{
-    //    Debug.Log("hello world");
-    //    // do one of the following
-    //    // engage the state manager  or dispatch an event that initializes the current party.
 
-    //}
 
 
 }

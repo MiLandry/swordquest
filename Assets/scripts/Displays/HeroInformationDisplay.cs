@@ -13,17 +13,10 @@ public class HeroInformationDisplay : MonoBehaviour
 
     private void Start()
     {
-        //icon.sprite = party.theSprite;
         name.text = party.name;
     }
 
-    //public void OnPartyClick()
-    //{
-    //    Debug.Log("hello world");
-    //    // do one of the following
-    //    // engage the state manager  or dispatch an event that initializes the current party.
 
-    //}
 
 
 }

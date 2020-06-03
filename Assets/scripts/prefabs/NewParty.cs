@@ -21,10 +21,10 @@ public class NewParty : MonoBehaviour
 
     public void OnPartyClick()
     {
-        Debug.Log("hello world");
         Debug.Log("party selected: " + party.partyName);
         PartyManager.party = party;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("StrategicMap");
+        Game game = Object.FindObjectOfType<Game>();
+        game.LoadLevel("Strategic");
         // load scene
 
         // do one of the following

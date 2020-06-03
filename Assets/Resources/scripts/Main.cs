@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// main, aka the 'prescene', it runs on game start, at any scene. It creates a game object
+// (a prefab), called Main. This prefab is a container for all scripts to run at boot time.
+// this container can containe services.
+// note that these services will have to determine if they are destroyable, not managed here.
+// You can choose to add any "Service" component to the Main prefab.
+// Examples are: Input, Saving, Sound, Config, Asset Bundles, Advertisements
 public class Main : MonoBehaviour
 {
     // Runs before a scene gets loaded
@@ -11,6 +17,5 @@ public class Main : MonoBehaviour
         GameObject main = GameObject.Instantiate(Resources.Load("Main")) as GameObject;
         GameObject.DontDestroyOnLoad(main);
     }
-    // You can choose to add any "Service" component to the Main prefab.
-    // Examples are: Input, Saving, Sound, Config, Asset Bundles, Advertisements
+
 }

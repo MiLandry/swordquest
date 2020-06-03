@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This component runs at start time
+//Its job is to control scenes
+//it will be DDOL.
+// you can reference this with Game game = Object.FindObjectOfType<Game>();
+// game.loadLevel
 public class Game : Singleton<Game>
 {
     //currentScene;
-    // load and unload game levels
-    // game state
-    // other manager instances generate other persistent sysstems
-    // clean up code
-    // start up code
-    //TODO create a list of async Operations currently running
-    // you would have maually and and remove on the defined callbacks below
 
     //singleton
     private static Game instance;
@@ -30,27 +28,26 @@ public class Game : Singleton<Game>
         }
     }
 
-    List<AsyncOperation> _loadOperations;
+    //a list containing all scenes currently being loaded.
+    //currently there is no logic pushing to this.
+    List<AsyncOperation> _sceneLoadOperations;
 
 
     private void Start()
     {
-
-
-        DontDestroyOnLoad(gameObject);
-        _loadOperations = new List<AsyncOperation>();
-        //LoadLevel("StartScreen");
+        _sceneLoadOperations = new List<AsyncOperation>();
     }
 
     private string _currentLevelName = string.Empty;
 
-    void OnLoadOperationComplete(AsyncOperation ao)
+    // callback that runs whene a scene finishes loading
+    void OnSceneLoadOperationComplete(AsyncOperation ao)
     {
-        Debug.Log(" Load Complete.");
+        Debug.Log(" Scene Load Complete.");
 
-        if (_loadOperations.Contains(ao))
+        if (_sceneLoadOperations.Contains(ao))
         {
-            _loadOperations.Remove(ao);
+            _sceneLoadOperations.Remove(ao);
 
             //dispatch messag
             //transition between screnes
@@ -63,20 +60,23 @@ public class Game : Singleton<Game>
 
     }
 
+    // loads the scene, and also unloads the current scene
     public void LoadLevel(string levelName)
     {
-        AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
-        if (ao == null)
+        Debug.Log("Loading scene : " + levelName);
+        try
         {
-            Debug.LogError("[Game] Unable to load level " + levelName);
-            return;
-        }
-        _currentLevelName = levelName;
-        ao.completed += OnLoadOperationComplete;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
 
+        }
+        catch
+        {
+            Debug.LogError("error loading scene");
+        }
     }
 
-    public void UnloadLevel(string levelName)
+    //not sure about making this public, i want the load level method to auto unload the current scene
+    void UnloadLevel(string levelName)
     {
         AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
         if (ao == null)
