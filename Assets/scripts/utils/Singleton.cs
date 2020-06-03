@@ -18,6 +18,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 
     protected virtual void Awake()
     {
+        Debug.Log("creating new Singleton");
         if (instance != null)
         {
             Debug.LogError("[Singleton] Trying to instantiate a second instance of singleton class.");

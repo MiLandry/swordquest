@@ -22,7 +22,8 @@ public class NewParty : MonoBehaviour
     public void OnPartyClick()
     {
         Debug.Log("party selected: " + party.partyName);
-        PartyManager.party = party;
+        PartyService partyService = Object.FindObjectOfType<PartyService>();
+        partyService.party = party;
         Game game = Object.FindObjectOfType<Game>();
         game.LoadLevel("Strategic");
         // load scene

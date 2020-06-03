@@ -7,6 +7,7 @@ using UnityEngine;
 // this container can containe services.
 // note that these services will have to determine if they are destroyable, not managed here.
 // You can choose to add any "Service" component to the Main prefab.
+//They will be added as scripts. Call them "Service" they are stateful.
 // Examples are: Input, Saving, Sound, Config, Asset Bundles, Advertisements
 public class Main : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class Main : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void LoadMain()
     {
+        Debug.Log("Pre-scene loading...");
         GameObject main = GameObject.Instantiate(Resources.Load("Main")) as GameObject;
-        GameObject.DontDestroyOnLoad(main);
+        DontDestroyOnLoad(main);
     }
 
 }

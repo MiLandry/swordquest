@@ -11,8 +11,8 @@ using System;
 public class HeroReference
 {
     public bool UseConstant = true;
-    public Hero_SO ConstantValue;
-    public Hero_SO Variable;
+    public GCharacter_SO ConstantValue;
+    public GCharacter_SO Variable;
 
     public HeroReference()
     { }
@@ -23,7 +23,7 @@ public class HeroReference
     //    ConstantValue = value;
     //}
 
-    public Hero_SO Value
+    public GCharacter_SO Value
     {
         get { return UseConstant ? ConstantValue : Variable; }
     }

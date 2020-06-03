@@ -11,13 +11,13 @@ public class PartyDisplay : MonoBehaviour
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     //it should already be bundled with the prefab
-    public GameObject heroInformationDisplay;
+    public GameObject GCharacterInformationDisplay;
 
-    private void addHero(Hero_SO hero)
+    private void addHero(GCharacter_SO hero)
     {
         GameObject container = this.transform.Find("Hero container").gameObject;
         GridLayoutGroup grid = container.GetComponent(typeof(GridLayoutGroup)) as GridLayoutGroup;
-        GameObject display = Instantiate(heroInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject display = Instantiate(GCharacterInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
 
         display.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
         display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + hero.hp.ToString();
@@ -38,11 +38,12 @@ public class PartyDisplay : MonoBehaviour
 
     private void Start()
     {
-        party = PartyManager.party;
+        PartyService partyService = Object.FindObjectOfType<PartyService>();
+        party = partyService.party;
 
         //icon.sprite = party.theSprite;
         partyName.text = party.partyName;
-        foreach (Hero_SO hero in party.heroes) // Loop through List with foreach
+        foreach (GCharacter_SO hero in party.gCharacters) // Loop through List with foreach
         {
             addHero(hero);
 

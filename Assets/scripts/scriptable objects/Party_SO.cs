@@ -6,8 +6,8 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "NewParty", menuName = "Party_SO")]
 public class Party_SO : ScriptableObject
 {
-    public List<Hero_SO> heroes;
-    [SerializeField]
+    public List<GCharacter_SO> gCharacters;
+    //[SerializeField]
     public Sprite theSprite;
     public string partyName;
 

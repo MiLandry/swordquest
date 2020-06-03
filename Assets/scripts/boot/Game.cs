@@ -6,32 +6,21 @@ using UnityEngine.SceneManagement;
 // This component runs at start time
 //Its job is to control scenes
 //it will be DDOL.
+// do NOT put other services, those will ??
 // you can reference this with Game game = Object.FindObjectOfType<Game>();
 // game.loadLevel
 public class Game : Singleton<Game>
 {
-    //currentScene;
-
-    //singleton
-    private static Game instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            Debug.LogError("badness");
-        }
-    }
 
     //a list containing all scenes currently being loaded.
     //currently there is no logic pushing to this.
     List<AsyncOperation> _sceneLoadOperations;
 
+    override protected void Awake()
+    {
+        Debug.Log("Creating GameService...");
+        base.Awake();
+    }
 
     private void Start()
     {
