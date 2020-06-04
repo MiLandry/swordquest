@@ -21,6 +21,13 @@ public class GCharacterInformationDisplay : MonoBehaviour
             gCharacter = partyService.party.gCharacters[0];
 
         }
+
+
+        this.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = gCharacter.name;
+        this.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + gCharacter.hp.ToString();
+        this.transform.Find("gclass").gameObject.GetComponent<UnityEngine.UI.Text>().text = gCharacter.gClass.name;
+        this.transform.Find("Character art").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = gCharacter.icon;
+
     }
 
 

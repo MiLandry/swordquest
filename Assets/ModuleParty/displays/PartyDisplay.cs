@@ -19,10 +19,10 @@ public class PartyDisplay : MonoBehaviour
         GridLayoutGroup grid = container.GetComponent(typeof(GridLayoutGroup)) as GridLayoutGroup;
         GameObject display = Instantiate(GCharacterInformationDisplay, new Vector3(0, 0, 0), Quaternion.identity);
 
-        display.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
-        display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + hero.hp.ToString();
-        display.transform.Find("gclass").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.gClass.name;
-        display.transform.Find("Character art").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = hero.icon;
+        //display.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.name;
+        //display.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + hero.hp.ToString();
+        //display.transform.Find("gclass").gameObject.GetComponent<UnityEngine.UI.Text>().text = hero.gClass.name;
+        //display.transform.Find("Character art").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = hero.icon;
 
         //display.GetComponent<UnityEngine.UI.Text>().text = hero.name;
 
