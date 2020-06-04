@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1722fe8b0d29491a804773d5ebc9a56, type: 3}
   m_Name: TestParty
   m_EditorClassIdentifier: 
-  heroes:
-  - {fileID: 11400000, guid: 1c7f1a2b95a80418296017eb80467aee, type: 2}
+  gCharacters:
+  - {fileID: 11400000, guid: f937f45dfe8fc4fe389a637af7068683, type: 2}
   theSprite: {fileID: 21300000, guid: b6baff5b675b6ec44bcc170eb2d73a77, type: 3}
   partyName: Test party

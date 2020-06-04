@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69bc3191670bd4e7a8628220b8643fed, type: 3}
+  m_Script: {fileID: 11500000, guid: 707fd4796c0ed4306b9363eef264c000, type: 3}
   m_Name: Conan
   m_EditorClassIdentifier: 
-  name: Conan
-  hp: 9
-  gClass: {fileID: 11400000, guid: 0ddd6108899354527a36b148a45cca33, type: 2}
+  name: 
+  hp: 0
+  gClass: {fileID: 0}
+  icon: {fileID: 0}
