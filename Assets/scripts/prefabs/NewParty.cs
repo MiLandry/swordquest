@@ -23,7 +23,7 @@ public class NewParty : MonoBehaviour
     {
         Debug.Log("party selected: " + party.partyName);
         PartyService partyService = Object.FindObjectOfType<PartyService>();
-        partyService.party = party;
+        partyService.Party = party;
         Game game = Object.FindObjectOfType<Game>();
         game.LoadLevel("Strategic");
         // load scene
