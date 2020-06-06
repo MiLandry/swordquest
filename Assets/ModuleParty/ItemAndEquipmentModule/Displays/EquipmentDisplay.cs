@@ -29,8 +29,7 @@ public class EquipmentDisplay : MonoBehaviour
 
     public void OnInventoryItemClicked()
     {
-        Debug.Log("Event EquipmentClicked Raised");
-        Debug.Log("equipment: " + Equipment.name);
+        Debug.Log("Event EquipmentClicked Raised" + "equipment: " + Equipment.name);
         OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment));
 
     }

@@ -24,8 +24,7 @@ public class PartyInventoryDisplay : MonoBehaviour
                 display.transform.SetParent(layoutGroup.transform, false);
                 display.transform.Find("ItemName").GetComponent<UnityEngine.UI.Text>().text = item.name;
                 display.transform.Find("Icon").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = item.icon;
-
-
+                display.GetComponent<InventoryItemDisplay>().Item = item;
             }
 
         }

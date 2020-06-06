@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class EquipmentSetDisplay : MonoBehaviour
 {
@@ -21,7 +22,12 @@ public class EquipmentSetDisplay : MonoBehaviour
 
         }
 
-        foreach (Equipment equipment in gCharacter.equipmentSet)
+        var sortedEquipment = gCharacter.equipmentSet;
+        //List<Equipment> sortedEquipment = gCharacter.equipmentSet
+        //    .OrderByDescending(e => e.sortRank).ToList();
+        //.OrderByDescending(e => e.sortRank);
+
+        foreach (Equipment equipment in sortedEquipment)
         {
             GameObject display = Instantiate(equipmentDisplay, new Vector3(0, 0, 0), Quaternion.identity);
             GameObject layout = this.transform.GetChild(0).gameObject;
