@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class OnEquipmentClickedArgs
 {
-    public OnEquipmentClickedArgs(Equipment equipment) { Equipment = equipment; }
+    public OnEquipmentClickedArgs(Equipment equipment, int index) { Equipment = equipment; Index = index; }
     public Equipment Equipment { get; }
+    public int Index { get; }
 }
 
 public class EquipmentDisplay : MonoBehaviour
@@ -14,9 +15,17 @@ public class EquipmentDisplay : MonoBehaviour
     public Equipment Equipment
     { get; set; }
 
+    public int Index {get; set; }
+
 
     private void Start()
     {
+        if (Equipment == null)
+        {
+            //load a herring as a default
+            Equipment =
+                Resources.Load<Equipment>("TestData/Herring");
+        }
         this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = Equipment.name;
         this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = Equipment.icon;
 
@@ -30,7 +39,7 @@ public class EquipmentDisplay : MonoBehaviour
     public void OnInventoryItemClicked()
     {
         Debug.Log("Event EquipmentClicked Raised" + "equipment: " + Equipment.name);
-        OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment));
+        OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment, Index));
 
     }
 }

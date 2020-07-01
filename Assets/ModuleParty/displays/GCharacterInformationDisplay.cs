@@ -18,7 +18,7 @@ public class GCharacterInformationDisplay : MonoBehaviour
             // member of the party
             PartyService partyService = Object.FindObjectOfType<PartyService>();
 
-            gCharacter = partyService.Party.gCharacters[0];
+            gCharacter = partyService.GCharacter;
 
         }
 

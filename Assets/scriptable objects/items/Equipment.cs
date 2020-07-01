@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO rename to Equipment_SO
 public class Equipment : Item_SO
 {
     /// <summary>

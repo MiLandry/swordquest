@@ -15,7 +15,7 @@ public class PartyInventoryDisplay : MonoBehaviour
             // member of the party
             PartyService partyService = Object.FindObjectOfType<PartyService>();
 
-            items = partyService.Party.inventory;
+            items = partyService.Inventory;
             UnityEngine.UI.GridLayoutGroup layoutGroup = this.GetComponent<UnityEngine.UI.GridLayoutGroup>();
 
             foreach (Item_SO item in items) // Loop through List with foreach

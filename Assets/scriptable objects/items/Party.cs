@@ -1,10 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "NewParty", menuName = "Party_SO")]
-public class Party_SO : ScriptableObject
+public class Party
 {
     public List<GCharacter_SO> gCharacters;
     //[SerializeField]

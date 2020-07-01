@@ -8,15 +8,32 @@ using System.Linq;
 //reference this by PartyService partyService = Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
+    // public Party party
+    // {
+    //     get; set;
+    // }
+
+
+
+    public GCharacter_SO GCharacter;
+
+    public List<Equipment> EquipmentSet;
+
+    public int IndexOfEquipmentBeingChanged;
+
+    public List<Item_SO> Inventory;
+
+
+
     public Party_SO Party
     {
         get; set;
     }
 
-    public GCharacter_SO CharacterCurrentlyEdited
-    {
-        get; set;
-    }
+    // public GCharacter_SO CharacterCurrentlyEdited
+    // {
+    //     get; set;
+    // }
 
 
 
@@ -26,21 +43,47 @@ public class PartyService : Singleton<PartyService>
         base.Awake();
 
         //load test data
-        if (Party == null)
-        {
-            Party_SO testParty = Resources.Load<Party_SO>("TestData/TestParty");
-            // probably need to copy over test data into 'game data'????
-            Party = testParty;
-            CharacterCurrentlyEdited = Party.gCharacters[0];
-            Debug.Log("Loading test party for gameplay");
+        // if (Party == null)
+        // {
+        //     Party_SO testParty = Resources.Load<Party_SO>("TestData/TestParty");
+        //     // probably need to copy over test data into 'game data'????
+        //     Party = testParty;
+        //     //CharacterCurrentlyEdited = Party.gCharacters[0];
+        //     Debug.Log("Loading test party for gameplay");
 
-        }
+        // }
 
         //subscribe to stuff
         InventoryItemDisplay.OnItemSelected += EquipItem;
         EquipmentDisplay.OnEquipmentClicked += ChangeEquipment;
 
 
+    }
+    void Start()
+    {
+        if (GCharacter == null)
+        {
+            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+            GCharacter = defaultData.GCharacter;
+
+        }
+
+
+        if (!EquipmentSet.Any());
+        {
+
+            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+            EquipmentSet = defaultData.EquipmentSet;
+
+        }
+
+        if (!Inventory.Any()) ;
+        {
+
+            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+            Inventory = defaultData.Inventory;
+
+        }
     }
 
 
@@ -62,14 +105,21 @@ public class PartyService : Singleton<PartyService>
     {
         //open party inventory panel
         ToggleInventory();
+        IndexOfEquipmentBeingChanged = e.Index;
+
     }
 
 
     private void EquipItem(object sender, OnItemSelectedArgs e)
     {
-        //pick up here, figure out why e is null
+        ToggleInventory();
+
         Debug.Log(" Equipping item..." + e.Item.name);
-        EquipItem(CharacterCurrentlyEdited, (Equipment)e.Item, 0);
+        if (e.Item is Equipment equipment) {
+        EquipmentSet[IndexOfEquipmentBeingChanged] = equipment;
+        }
+
+        //EquipItem(CharacterCurrentlyEdited, (Equipment)e.Item, 0);
     }
 
 
@@ -77,9 +127,11 @@ public class PartyService : Singleton<PartyService>
     public void EquipItem(GCharacter_SO gCharacter, Equipment newItem, int indexOfEquipmentSet)
     {
         //GCharacter_SO oldCharacter = Party.gCharacters.Find(gCharacter);
-        GCharacter_SO character = Party.gCharacters.Find(c => c.Equals(gCharacter));
+        //GCharacter_SO character = Party.gCharacters.Find(c => c.Equals(gCharacter));
 
-        character.equipmentSet[indexOfEquipmentSet] = newItem;
+
+
+        // character.equipmentSet[indexOfEquipmentSet] = newItem;
         // update the character equipement set , add the existing equipemnt
         //to the party inventory, and remove the equipment from the party inventory
 
@@ -89,9 +141,7 @@ public class PartyService : Singleton<PartyService>
 
     private void AddItemToPartyInventory(object sender, OnItemSelectedArgs e)
     {
-        //Debug.Log("adding new Item" + e.Text);
-        //Party.inventory.Add(e.Item);
-        // wait what I doing
+
     }
 
     /// <summary>
@@ -106,7 +156,6 @@ public class PartyService : Singleton<PartyService>
             GameObject inventoryPanel = GameObject.FindGameObjectsWithTag("InventoryPanel")[0];
             GameObject inventoryPanelCanvas = inventoryPanel.transform.GetChild(0).gameObject;
             inventoryPanelCanvas.SetActive(!inventoryPanelCanvas.activeInHierarchy);
-            //   inventoryPanel.transform.GetChild(0).gameObject.SetActive(!gameObject.activeInHierarchy);
 
         }
         else

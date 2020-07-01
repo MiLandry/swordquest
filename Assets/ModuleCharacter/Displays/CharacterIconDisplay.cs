@@ -6,7 +6,7 @@ public class CharacterIconDisplay : MonoBehaviour
 {
     private GCharacter_SO gCharacter;
 
-    // maybe change to awake??
+
     private void Start()
     {
         if (gCharacter == null)
@@ -15,7 +15,7 @@ public class CharacterIconDisplay : MonoBehaviour
             // member of the party
             PartyService partyService = Object.FindObjectOfType<PartyService>();
 
-            gCharacter = partyService.Party.gCharacters[0];
+            gCharacter = partyService.GCharacter;
 
         }
 
