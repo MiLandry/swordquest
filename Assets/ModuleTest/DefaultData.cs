@@ -5,21 +5,26 @@ using UnityEngine;
 public class DefaultData : MonoBehaviour
 {
 
-    public GCharacter_SO GCharacter;
+    public GCharacter GCharacter;
 
-    public List<Item_SO> Inventory;
+    //public List<Item> Inventory;
 
-    public List<Equipment> EquipmentSet;
+    //public List<Equipment> EquipmentSet;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        GCharacter = new GCharacter();
+        GCharacter.name = "testyboi";
+        GCharacter.currentHp =  2;
+        GCharacter.maxHp = 10;
+        GCharacter.gClass = new GClass();
+        GCharacter.gClass.name = "fighter";
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

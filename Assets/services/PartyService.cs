@@ -8,27 +8,27 @@ using System.Linq;
 //reference this by PartyService partyService = Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
-    // public Party party
-    // {
-    //     get; set;
-    // }
-
-
-
-    public GCharacter_SO GCharacter;
-
-    public List<Equipment> EquipmentSet;
-
-    public int IndexOfEquipmentBeingChanged;
-
-    public List<Item_SO> Inventory;
-
-
-
-    public Party_SO Party
+    public Party Party
     {
         get; set;
     }
+
+
+
+    public GCharacter GCharacter;
+
+    public List<Equipment> EquipmentSet;
+
+    // public int IndexOfEquipmentBeingChanged;
+
+    public List<Item> Inventory;
+
+
+
+    // public Party_SO Party
+    // {
+    //     get; set;
+    // }
 
     // public GCharacter_SO CharacterCurrentlyEdited
     // {
@@ -63,27 +63,32 @@ public class PartyService : Singleton<PartyService>
     {
         if (GCharacter == null)
         {
+            //lookup test asset files
+            // clone them
+            //use them as game data
+            // GCharacter conan = new GCharacter();
+            // conan.hp
             DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
             GCharacter = defaultData.GCharacter;
 
         }
 
 
-        if (!EquipmentSet.Any());
-        {
+        // if (!EquipmentSet.Any());
+        // {
 
-            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
-            EquipmentSet = defaultData.EquipmentSet;
+        //     DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+        //     EquipmentSet = defaultData.EquipmentSet;
 
-        }
+        // }
 
-        if (!Inventory.Any()) ;
-        {
+        // if (!Inventory.Any()) ;
+        // {
 
-            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
-            Inventory = defaultData.Inventory;
+        //     DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+        //     Inventory = defaultData.Inventory;
 
-        }
+        // }
     }
 
 
@@ -105,7 +110,7 @@ public class PartyService : Singleton<PartyService>
     {
         //open party inventory panel
         ToggleInventory();
-        IndexOfEquipmentBeingChanged = e.Index;
+        // IndexOfEquipmentBeingChanged = e.Index;
 
     }
 
@@ -116,7 +121,7 @@ public class PartyService : Singleton<PartyService>
 
         Debug.Log(" Equipping item..." + e.Item.name);
         if (e.Item is Equipment equipment) {
-        EquipmentSet[IndexOfEquipmentBeingChanged] = equipment;
+        // EquipmentSet[IndexOfEquipmentBeingChanged] = equipment;
         }
 
         //EquipItem(CharacterCurrentlyEdited, (Equipment)e.Item, 0);

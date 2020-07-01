@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NewParty : MonoBehaviour
 {
     //public PartyReference partyReference; not needed we are hardcoded
-    public Party_SO party;
+    public Party party;
 
 
     public Image icon;
@@ -16,7 +16,7 @@ public class NewParty : MonoBehaviour
     private void Start()
     {
         icon.sprite = party.theSprite;
-        name.text = party.name;
+        name.text = party.partyName;
     }
 
     public void OnPartyClick()

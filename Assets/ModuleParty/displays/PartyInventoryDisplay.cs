@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PartyInventoryDisplay : MonoBehaviour
 {
-    private List<Item_SO> items;
+    private List<Item> items;
     public GameObject itemDisplay;
 
     private void Start()
@@ -18,7 +18,7 @@ public class PartyInventoryDisplay : MonoBehaviour
             items = partyService.Inventory;
             UnityEngine.UI.GridLayoutGroup layoutGroup = this.GetComponent<UnityEngine.UI.GridLayoutGroup>();
 
-            foreach (Item_SO item in items) // Loop through List with foreach
+            foreach (Item item in items) // Loop through List with foreach
             {
                 GameObject display = Instantiate(itemDisplay, new Vector3(0, 0, 0), Quaternion.identity);
                 display.transform.SetParent(layoutGroup.transform, false);

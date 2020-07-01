@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OnItemSelectedArgs
 {
-    public OnItemSelectedArgs(Item_SO item) { Item = item; }
-    public Item_SO Item { get; } // readonly
+    public OnItemSelectedArgs(Item item) { Item = item; }
+    public Item Item { get; } // readonly
 }
 
 /// <summary>
@@ -14,7 +14,7 @@ public class OnItemSelectedArgs
 public class InventoryItemDisplay : MonoBehaviour
 {
 
-    public Item_SO Item
+    public Item Item
     {
         get; set;
     }

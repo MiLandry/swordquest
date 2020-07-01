@@ -38,16 +38,16 @@ public class PartyDisplay : MonoBehaviour
 
     private void Start()
     {
-        PartyService partyService = Object.FindObjectOfType<PartyService>();
-        party = partyService.Party;
+        // PartyService partyService = Object.FindObjectOfType<PartyService>();
+        // // party = partyService.Party;
 
-        //icon.sprite = party.theSprite;
-        partyName.text = party.partyName;
-        foreach (GCharacter_SO hero in party.gCharacters) // Loop through List with foreach
-        {
-            addHero(hero);
+        // //icon.sprite = party.theSprite;
+        // partyName.text = party.partyName;
+        // foreach (GCharacter hero in party.gCharacters) // Loop through List with foreach
+        // {
+        //     addHero(hero);
 
-        }
+        // }
 
 
     }

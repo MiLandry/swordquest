@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterIconDisplay : MonoBehaviour
 {
-    private GCharacter_SO gCharacter;
+    private GCharacter gCharacter;
 
 
     private void Start()

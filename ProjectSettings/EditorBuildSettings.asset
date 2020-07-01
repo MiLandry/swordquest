@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/ModuleStrategic/Strategic.unity
     guid: 6a8424f18537540a28dcd4280729483f
   - enabled: 1
-    path: Assets/StartScreen.unity
+    path: Assets/ModuleBoot/StartScreen.unity
     guid: 6c5b3204181874084b75949af64eb08f
   - enabled: 1
     path: Assets/ModuleDungeon/Dungeon.unity

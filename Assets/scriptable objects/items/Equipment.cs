@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//TODO rename to Equipment_SO
-public class Equipment : Item_SO
+
+public class Equipment : Item
 {
     /// <summary>
     /// When Rendering or sorting equipment, The equipment that has the highest

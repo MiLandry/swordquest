@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterDisplay : MonoBehaviour
 {
 
-    public GCharacter_SO Gcharacter;
+    public GCharacter Gcharacter;
 
     private void Start()
     {
