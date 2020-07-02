@@ -16,8 +16,10 @@ public class Main : MonoBehaviour
     public static void LoadMain()
     {
         Debug.Log("Pre-scene loading...");
+        Debug.Log("Pre-scene: creating main game object ...");
         GameObject main = GameObject.Instantiate(Resources.Load("Main")) as GameObject;
         DontDestroyOnLoad(main);
+
     }
 
 }

@@ -13,6 +13,7 @@ public class DefaultData : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("initializing default data");
         GCharacter = new GCharacter();
         GCharacter.name = "testyboi";
         GCharacter.currentHp =  2;

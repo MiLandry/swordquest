@@ -8,7 +8,7 @@ public class GCharacter
 {
      
 
-
+  public GCharacter_SO blueprint;
 
   public new string name;
   public int currentHp;
@@ -18,20 +18,7 @@ public class GCharacter
 
   public List<Equipment> equipmentSet;
 
-     public void OnBeforeSerialize()
-     {
 
-     }
- 
-     public void OnAfterDeserialize()
-     {
-;
-            // name = initialName;
-            // hp = initialHp;
-            // gClass = initialGClass;
-            // icon = initialIcon;
-
-     }
 
 
 

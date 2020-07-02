@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 
 //Its loaded before every run.
-//reference this by PartyService partyService = Object.FindObjectOfType<PartyService>();
+//reference this by PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
     public Party Party
@@ -63,12 +63,8 @@ public class PartyService : Singleton<PartyService>
     {
         if (GCharacter == null)
         {
-            //lookup test asset files
-            // clone them
-            //use them as game data
-            // GCharacter conan = new GCharacter();
-            // conan.hp
-            DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
+
+            DefaultData defaultData = UnityEngine.Object.FindObjectOfType<DefaultData>();
             GCharacter = defaultData.GCharacter;
 
         }
