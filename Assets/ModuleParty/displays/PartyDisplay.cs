@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//gets used to show the high level summary of the party during the strategic displays
 public class PartyDisplay : MonoBehaviour
 {
 
@@ -26,7 +27,6 @@ public class PartyDisplay : MonoBehaviour
 
         //display.GetComponent<UnityEngine.UI.Text>().text = hero.name;
 
-
         display.transform.SetParent(grid.transform);
         // get reference to container
 
@@ -34,25 +34,4 @@ public class PartyDisplay : MonoBehaviour
         // add a game object to container
 
     }
-
-
-    private void Start()
-    {
-        // PartyService partyService = Object.FindObjectOfType<PartyService>();
-        // // party = partyService.Party;
-
-        // //icon.sprite = party.theSprite;
-        // partyName.text = party.partyName;
-        // foreach (GCharacter hero in party.gCharacters) // Loop through List with foreach
-        // {
-        //     addHero(hero);
-
-        // }
-
-
-    }
-
-
-
-
 }

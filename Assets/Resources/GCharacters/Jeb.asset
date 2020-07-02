@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdf37068d07a424184a594a81a851a7, type: 3}
   m_Name: Jeb
   m_EditorClassIdentifier: 
-  initialName: 
-  initialStartingHp: 0
-  icon: {fileID: 0}
+  initialName: Jeb
+  initialStartingHp: 100
+  initialGClass:
+    name: Warrior
+  icon: {fileID: 21300000, guid: 3d5ddef146c81f84fb4ebe7fd7d2f534, type: 3}
