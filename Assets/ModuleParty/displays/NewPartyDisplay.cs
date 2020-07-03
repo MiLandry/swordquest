@@ -9,6 +9,7 @@ public class NewPartyDisplay : MonoBehaviour
 
     public string PartyName;
     public Sprite Icon;
+    public List<GCharacter> PartyMembers;
 
     // public GameObject IconDisplay;
     // public GameObject TextDisplay;
@@ -26,8 +27,9 @@ public class NewPartyDisplay : MonoBehaviour
     public void OnPartyClick()
     {
         Debug.Log("Initial party selected: " + PartyName);
-        // PartyService partyService = Object.FindObjectOfType<PartyService>();
-        // partyService.Party = party;
+        PartyService partyService = Object.FindObjectOfType<PartyService>();
+        partyService.PartyName = PartyName;
+        partyService.PartyMembers = PartyMembers;
         Game game = Object.FindObjectOfType<Game>();
         game.LoadLevel("Strategic");
 
