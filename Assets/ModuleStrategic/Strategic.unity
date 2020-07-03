@@ -834,6 +834,12 @@ PrefabInstance:
       propertyPath: Party.gCharacters.Array.data[0].name
       value: Gregor
       objectReference: {fileID: 0}
+    - target: {fileID: 1749197121312400911, guid: 9ba09a70e53f14807aec004637cca0c0,
+        type: 3}
+      propertyPath: GCharacterInformationDisplay_GO
+      value: 
+      objectReference: {fileID: 6096978347785938715, guid: 3728fb3c12137437f93413dfb802a813,
+        type: 3}
     - target: {fileID: 1749197122435535257, guid: 9ba09a70e53f14807aec004637cca0c0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
