@@ -15,7 +15,7 @@ public class CharacterIconDisplay : MonoBehaviour
             // member of the party
             PartyService partyService = Object.FindObjectOfType<PartyService>();
 
-            gCharacter = partyService.GCharacter;
+            gCharacter = partyService.PartyMembers[0];
 
         }
 

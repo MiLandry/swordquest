@@ -75,18 +75,13 @@ public class PartyService : Singleton<PartyService>
 
         // if (!EquipmentSet.Any());
         // {
-
-        //     DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
         //     EquipmentSet = defaultData.EquipmentSet;
 
         // }
 
         // if (!Inventory.Any()) ;
         // {
-
-        //     DefaultData defaultData = GameObject.Find("DefaultData").GetComponent<DefaultData>();
         //     Inventory = defaultData.Inventory;
-
         // }
     }
 

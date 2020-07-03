@@ -80,7 +80,7 @@ MonoBehaviour:
     gClass:
       name: 
     icon: {fileID: 0}
-    equipmentSet: []
+    EquipmentSet: []
   EquipmentSet: []
   Inventory: []
 --- !u!114 &7093169333155234224
@@ -103,7 +103,10 @@ MonoBehaviour:
     gClass:
       name: Thief
     icon: {fileID: 21300000, guid: c1e671d289f279b4ca8ad1b3f0476b11, type: 3}
-    equipmentSet: []
+    EquipmentSet:
+    - {fileID: 11400000, guid: 0bd4757ad1b157c45b3b4afc4837ff11, type: 2}
+    - {fileID: 11400000, guid: 861efc15ecb774f3c976283e7eab4a82, type: 2}
+    - {fileID: 11400000, guid: 56af4abd6b9924d14ba5455315593d5b, type: 2}
   PartyName: the heroic testing party
   GCharacter:
     blueprint: {fileID: 0}
@@ -113,4 +116,7 @@ MonoBehaviour:
     gClass:
       name: warrior
     icon: {fileID: 21300000, guid: 9fd1138f967f64a9da90c96dd7b44e52, type: 3}
-    equipmentSet: []
+    EquipmentSet: []
+  Inventory:
+  - {fileID: 11400000, guid: 2507a05e380e34001a5ad18ecbcf7738, type: 2}
+  - {fileID: 11400000, guid: 861efc15ecb774f3c976283e7eab4a82, type: 2}

@@ -16,7 +16,7 @@ public class GCharacter
   public GClass gClass;
   public Sprite icon;
 
-  public List<Equipment> equipmentSet;
+  public List<Equipment> EquipmentSet;
 
 
 

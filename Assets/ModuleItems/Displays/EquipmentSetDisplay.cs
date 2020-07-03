@@ -13,12 +13,13 @@ public class EquipmentSetDisplay : MonoBehaviour
     // maybe change to awake??
     private void Start()
     {
+        PartyService partyService = Object.FindObjectOfType<PartyService>();
         if (!EquipmentSet.Any());
         {
-            // for now, this fetches the party service equipment
-            PartyService partyService = Object.FindObjectOfType<PartyService>();
+            // for now, this fetches the first party member equipment
 
-            EquipmentSet = partyService.EquipmentSet;
+
+            EquipmentSet = partyService.PartyMembers[0].EquipmentSet;
 
         }
 
@@ -41,10 +42,10 @@ public class EquipmentSetDisplay : MonoBehaviour
 
     //TODO I have to destroy and re instantiate whenever the EquipmentSet changes;
 
-    private void Update()
-    {
-        Debug.Log("updating ESD");
-    }
+    // private void Update()
+    // {
+    //     Debug.Log("updating Equipment set display");
+    // }
 
 
 }

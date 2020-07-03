@@ -8,8 +8,7 @@ public class DefaultData : MonoBehaviour
     public List<GCharacter> PartyMembers;
     public string PartyName;
     public GCharacter GCharacter;
-
-    //public List<Item> Inventory;
+    public List<Item> Inventory;
 
     //public List<Equipment> EquipmentSet;
 
