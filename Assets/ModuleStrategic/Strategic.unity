@@ -885,5 +885,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1749197122501471940, guid: 9ba09a70e53f14807aec004637cca0c0,
+        type: 3}
+      propertyPath: m_Name
+      value: GCharacter container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba09a70e53f14807aec004637cca0c0, type: 3}
