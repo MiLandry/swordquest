@@ -10,19 +10,14 @@ public class EquipmentSetDisplay : MonoBehaviour
     public GameObject equipmentDisplay;
     public List<Equipment> EquipmentSet;
 
-    // maybe change to awake??
     private void Start()
     {
         PartyService partyService = Object.FindObjectOfType<PartyService>();
         if (!EquipmentSet.Any());
         {
             // for now, this fetches the first party member equipment
-
-
             EquipmentSet = partyService.PartyMembers[0].EquipmentSet;
-
         }
-
 
         //    .OrderByDescending(e => e.sortRank).ToList();
         //    .OrderByDescending(e => e.sortRank);

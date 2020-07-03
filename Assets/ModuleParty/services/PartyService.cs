@@ -10,6 +10,8 @@ public class PartyService : Singleton<PartyService>
 {
     public string PartyName;
     public List<GCharacter> PartyMembers;
+    public int IndexOfEditedGCharacter;
+
     //only for testing/prototyping really
     public GCharacter GCharacter;
     public List<Equipment> EquipmentSet;
@@ -20,7 +22,7 @@ public class PartyService : Singleton<PartyService>
     override protected void Awake()
     {
         Debug.Log("Creating PartyService...");
-        base.Awake();
+        base.Awake(); 
 
         InventoryItemDisplay.OnItemSelected += EquipItem;
         EquipmentDisplay.OnEquipmentClicked += ChangeEquipment;
@@ -39,6 +41,7 @@ public class PartyService : Singleton<PartyService>
         {
             PartyMembers = defaultData.PartyMembers;
         }
+        IndexOfEditedGCharacter = 0;
 
         if (String.IsNullOrEmpty(PartyName))
         {
@@ -90,13 +93,14 @@ public class PartyService : Singleton<PartyService>
     private void EquipItem(object sender, OnItemSelectedArgs e)
     {
         ToggleInventory();
+        var Gcharacter = PartyMembers[0];
 
-        Debug.Log(" Equipping item..." + e.Item.name);
+        Debug.Log(" Equipping item...: " + e.Item.name);
+        Debug.Log("... onto Character: " + Gcharacter);
         if (e.Item is Equipment equipment) {
-        // EquipmentSet[IndexOfEquipmentBeingChanged] = equipment;
+            Gcharacter.EquipmentSet.Add(e.Item as Equipment);
+            OnEquipmentEquippedEvent.Raise(this, new OnEquipmentEquippedArgs(e.Item as Equipment));
         }
-
-        //EquipItem(CharacterCurrentlyEdited, (Equipment)e.Item, 0);
     }
 
 
