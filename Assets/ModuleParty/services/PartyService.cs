@@ -8,34 +8,12 @@ using System.Linq;
 //reference this by PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
-    //suddenly I realize this datatype is confusing and I need to remove it
-    // public Party Party;
     public string PartyName;
     public List<GCharacter> PartyMembers;
-
     //only for testing/prototyping really
     public GCharacter GCharacter;
-
-
     public List<Equipment> EquipmentSet;
-
-    // public int IndexOfEquipmentBeingChanged;
-
-    // 
-
     public List<Item> Inventory;
-
-
-
-    // public Party_SO Party
-    // {
-    //     get; set;
-    // }
-
-    // public GCharacter_SO CharacterCurrentlyEdited
-    // {
-    //     get; set;
-    // }
 
 
 
@@ -79,10 +57,10 @@ public class PartyService : Singleton<PartyService>
 
         // }
 
-        // if (!Inventory.Any()) ;
-        // {
-        //     Inventory = defaultData.Inventory;
-        // }
+        if (!Inventory.Any()) ;
+        {
+           Inventory = defaultData.Inventory;
+        }
     }
 
 

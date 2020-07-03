@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PartyInventoryDisplay : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PartyInventoryDisplay : MonoBehaviour
 
     private void Start()
     {
-        if (items == null)
+        if (items == null || !items.Any())
         {
             // If not injected with data, this will look up the 'first' character
             // member of the party
