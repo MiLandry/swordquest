@@ -7,15 +7,16 @@ using UnityEngine;
 public class NewPartyDisplay : MonoBehaviour
 {
 
-    public Party party;
+    public string PartyName;
+    public Sprite Icon;
 
     // public GameObject IconDisplay;
     // public GameObject TextDisplay;
 
     private void Start()
     {
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = party.partyName;
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = party.icon;
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = PartyName;
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = Icon;
 
 
         // icon = party.theSprite;
@@ -24,9 +25,9 @@ public class NewPartyDisplay : MonoBehaviour
 
     public void OnPartyClick()
     {
-        Debug.Log("Initial party selected: " + party.partyName);
-        PartyService partyService = Object.FindObjectOfType<PartyService>();
-        partyService.Party = party;
+        Debug.Log("Initial party selected: " + PartyName);
+        // PartyService partyService = Object.FindObjectOfType<PartyService>();
+        // partyService.Party = party;
         Game game = Object.FindObjectOfType<Game>();
         game.LoadLevel("Strategic");
 

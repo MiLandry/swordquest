@@ -5,6 +5,8 @@ using UnityEngine;
 public class DefaultData : MonoBehaviour
 {
 
+    public List<GCharacter> PartyMembers;
+    public string PartyName;
     public GCharacter GCharacter;
 
     //public List<Item> Inventory;
@@ -14,12 +16,7 @@ public class DefaultData : MonoBehaviour
     void Awake()
     {
         Debug.Log("initializing default data");
-        GCharacter = new GCharacter();
-        GCharacter.name = "testyboi";
-        GCharacter.currentHp =  2;
-        GCharacter.maxHp = 10;
-        GCharacter.gClass = new GClass();
-        GCharacter.gClass.name = "fighter";
+
 
     }
 

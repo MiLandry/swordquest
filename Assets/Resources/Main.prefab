@@ -70,6 +70,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7706680fa62df40818cba2e616dbfe11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PartyName: 
+  PartyMembers: []
+  GCharacter:
+    blueprint: {fileID: 0}
+    name: 
+    currentHp: 0
+    maxHp: 0
+    gClass:
+      name: 
+    icon: {fileID: 0}
+    equipmentSet: []
   EquipmentSet: []
   Inventory: []
 --- !u!114 &7093169333155234224
@@ -84,3 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed549f7fb0dfa74a8258fc1623e8c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PartyMembers: []
+  PartyName: the heroic testing party
+  GCharacter:
+    blueprint: {fileID: 0}
+    name: Conan
+    currentHp: 55
+    maxHp: 66
+    gClass:
+      name: warrior
+    icon: {fileID: 21300000, guid: 9fd1138f967f64a9da90c96dd7b44e52, type: 3}
+    equipmentSet: []

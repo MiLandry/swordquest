@@ -8,18 +8,20 @@ using System.Linq;
 //reference this by PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
-    public Party Party
-    {
-        get; set;
-    }
+    //suddenly I realize this datatype is confusing and I need to remove it
+    // public Party Party;
+    public string PartyName;
+    public List<GCharacter> PartyMembers;
 
-
-
+    //only for testing/prototyping really
     public GCharacter GCharacter;
+
 
     public List<Equipment> EquipmentSet;
 
     // public int IndexOfEquipmentBeingChanged;
+
+    // 
 
     public List<Item> Inventory;
 
@@ -42,18 +44,6 @@ public class PartyService : Singleton<PartyService>
         Debug.Log("Creating PartyService...");
         base.Awake();
 
-        //load test data
-        // if (Party == null)
-        // {
-        //     Party_SO testParty = Resources.Load<Party_SO>("TestData/TestParty");
-        //     // probably need to copy over test data into 'game data'????
-        //     Party = testParty;
-        //     //CharacterCurrentlyEdited = Party.gCharacters[0];
-        //     Debug.Log("Loading test party for gameplay");
-
-        // }
-
-        //subscribe to stuff
         InventoryItemDisplay.OnItemSelected += EquipItem;
         EquipmentDisplay.OnEquipmentClicked += ChangeEquipment;
 
@@ -61,12 +51,25 @@ public class PartyService : Singleton<PartyService>
     }
     void Start()
     {
-        if (GCharacter == null)
+        DefaultData defaultData = UnityEngine.Object.FindObjectOfType<DefaultData>();
+        if (defaultData==null)
         {
+            Debug.LogError(" Your default data prefab is broken and you are going to be sad.");
+        }
 
-            DefaultData defaultData = UnityEngine.Object.FindObjectOfType<DefaultData>();
+        if (!PartyMembers.Any())
+        {
+            PartyMembers = defaultData.PartyMembers;
+        }
+
+        if (String.IsNullOrEmpty(PartyName))
+        {
+            PartyName = defaultData.PartyName;
+        }
+
+        if (String.IsNullOrEmpty(GCharacter.name))
+        {
             GCharacter = defaultData.GCharacter;
-
         }
 
 
