@@ -18,6 +18,9 @@ public class InventoryItemDisplay : MonoBehaviour
     {
         get; set;
     }
+
+
+    
     //TODO factor this event out of this class
     // Declare the delegate (if using non-generic pattern).
     public delegate void OnItemSelectedHandler(object sender, OnItemSelectedArgs e);

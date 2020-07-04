@@ -60,7 +60,7 @@ public class PartyService : Singleton<PartyService>
 
         // }
 
-        if (!Inventory.Any()) ;
+        if (!Inventory.Any())
         {
            Inventory = defaultData.Inventory;
         }
@@ -83,10 +83,7 @@ public class PartyService : Singleton<PartyService>
     /// <param name="e"></param>
     private void ChangeEquipment(object sender, OnEquipmentClickedArgs e)
     {
-        //open party inventory panel
         ToggleInventory();
-        // IndexOfEquipmentBeingChanged = e.Index;
-
     }
 
 
@@ -96,7 +93,7 @@ public class PartyService : Singleton<PartyService>
         var Gcharacter = PartyMembers[0];
 
         Debug.Log(" Equipping item...: " + e.Item.name);
-        Debug.Log("... onto Character: " + Gcharacter);
+        Debug.Log("... onto Character: " + Gcharacter.name);
         if (e.Item is Equipment equipment) {
             Gcharacter.EquipmentSet.Add(e.Item as Equipment);
             OnEquipmentEquippedEvent.Raise(this, new OnEquipmentEquippedArgs(e.Item as Equipment));

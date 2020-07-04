@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class GClass
 {
-    public new string name;
+    public  string name;
 
 
 

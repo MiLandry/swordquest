@@ -10,7 +10,7 @@ using UnityEngine;
 public class GCharacter_SO : ScriptableObject, ISerializationCallbackReceiver
 {
 
-  public new string initialName;
+  public string initialName;
   public int initialStartingHp;
   public GClass initialGClass;
   public Sprite icon;

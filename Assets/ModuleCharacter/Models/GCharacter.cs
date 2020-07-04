@@ -10,7 +10,7 @@ public class GCharacter
 
   public GCharacter_SO blueprint;
 
-  public new string name;
+  public string name;
   public int currentHp;
   public int maxHp;
   public GClass gClass;

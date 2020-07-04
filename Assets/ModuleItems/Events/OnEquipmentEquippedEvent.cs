@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class OnEquipmentEquippedEvent
 {
+    //this is the delegate
     public delegate void OnEquipmentEquippedHandler(object sender, OnEquipmentEquippedArgs e);
+
     // this is the event
     public static event OnEquipmentEquippedHandler OnEquipmentEquipped;
 
@@ -15,11 +17,4 @@ public class OnEquipmentEquippedEvent
         OnEquipmentEquipped?.Invoke(sender, e);
     }
 
-
 }
-
-
-
-
-            // usage
-            // OnEquipmentEquipped?.Invoke(this, new OnOnEquipmentEquippedArgs(e.Item as Equipment));
