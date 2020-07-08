@@ -9,8 +9,8 @@ public class PartySystem : MonoBehaviour
     {
 
         // update state of currently editing character and load the character menu scene
-        Game game = Object.FindObjectOfType<Game>();
-        game.LoadLevel("Character Menu");
+        // Game game = Object.FindObjectOfType<Game>();
+        // game.LoadLevel("Character Menu");
 
     }
 }
