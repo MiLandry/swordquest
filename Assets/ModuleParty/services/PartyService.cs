@@ -5,7 +5,8 @@ using UnityEngine;
 using System.Linq;
 
 //Its loaded before every run.
-//reference this by PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
+//reference this by...
+//      PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
     public string PartyName;

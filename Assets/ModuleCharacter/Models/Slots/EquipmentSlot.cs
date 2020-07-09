@@ -12,4 +12,15 @@ public class EquipmentSlot : MonoBehaviour
     public int sortRank = 0;
     public Equipment Equipment;
 
+    public virtual Sprite GetIcon()
+    {
+        if (Equipment == null)
+        {
+            Debug.LogError("I dont know what to do here");
+            return null;
+        }
+
+        return Equipment.Icon;
+    }
+
 }

@@ -26,8 +26,8 @@ public class EquipmentDisplay : MonoBehaviour
             Equipment =
                 Resources.Load<Equipment>("TestData/Herring");
         }
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = Equipment.name;
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = Equipment.icon;
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = Equipment.Name;
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = Equipment.Icon;
 
     }
 

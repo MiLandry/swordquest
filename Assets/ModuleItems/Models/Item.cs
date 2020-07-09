@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public new string name;
-    public Sprite icon;
-    public int tier;
+    public new string Name;
+    public Sprite Icon;
+    public int Tier;
 
 }

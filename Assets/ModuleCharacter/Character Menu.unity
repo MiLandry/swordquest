@@ -970,12 +970,12 @@ PrefabInstance:
     - target: {fileID: 3570582616456218877, guid: 7c8f7e8e68d0baa40b568d9a31396fdd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -432
+      value: -441
       objectReference: {fileID: 0}
     - target: {fileID: 3570582616456218877, guid: 7c8f7e8e68d0baa40b568d9a31396fdd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -258
+      value: -254
       objectReference: {fileID: 0}
     - target: {fileID: 3570582616456218877, guid: 7c8f7e8e68d0baa40b568d9a31396fdd,
         type: 3}
@@ -1242,6 +1242,12 @@ PrefabInstance:
       propertyPath: EquipmentDisplay
       value: 
       objectReference: {fileID: 8533971085564683480, guid: a3a55d96fd2844f3d9537e83eac6b27f,
+        type: 3}
+    - target: {fileID: 8915215609794372466, guid: 1f14f153a34b344b5a3b60f03bf3021d,
+        type: 3}
+      propertyPath: EquipmentSlotDisplay
+      value: 
+      objectReference: {fileID: 4847513605612309040, guid: 7c8f7e8e68d0baa40b568d9a31396fdd,
         type: 3}
     - target: {fileID: 9071503082727964475, guid: 1f14f153a34b344b5a3b60f03bf3021d,
         type: 3}

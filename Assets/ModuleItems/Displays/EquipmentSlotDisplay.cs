@@ -25,22 +25,35 @@ public class EquipmentSlotDisplay : MonoBehaviour
 
     private void Start()
     {
-        Sprite icon;
-        string slotName;
+
         if (EquipmentSlot == null)
         {
-            icon = Resources.Load<Sprite>("Icons/Elixir_4");
-            slotName = "";
+            Debug.Log("Getting default equipmentslot");
+            PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
+            EquipmentSlot = partyService.PartyMembers[0].EquipmentSlotSet[0];
+
+
         }
-        else
         {
-            icon =  EquipmentSlot.Equipment.icon;
-            slotName = EquipmentSlot.Equipment.name;
+            Sprite icon = EquipmentSlot.GetIcon();
+            string slotName;
 
 
+            Equipment equipment = EquipmentSlot.Equipment;
+            if ( equipment == null)
+            {
+                icon = Resources.Load<Sprite>("Icons/Elixir_4");
+                slotName = "";
+            }
+            else
+            {
+                icon =  EquipmentSlot.Equipment.Icon;
+                slotName = EquipmentSlot.Equipment.Name;
+            }
+            this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = slotName;
+            this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = icon;
         }
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = slotName;
-        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = icon;
+
 
     }
 
