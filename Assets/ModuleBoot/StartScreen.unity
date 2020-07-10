@@ -509,7 +509,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1213489255}
   - component: {fileID: 1213489254}
-  - component: {fileID: 1213489257}
   - component: {fileID: 1213489256}
   m_Layer: 0
   m_Name: StartScreenManager
@@ -640,14 +639,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &1213489257
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213489253}
-  m_Enabled: 1
 --- !u!1 &1460400201
 GameObject:
   m_ObjectHideFlags: 0

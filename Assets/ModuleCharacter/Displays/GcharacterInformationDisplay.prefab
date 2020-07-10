@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 6096978347785938713}
   - component: {fileID: 825147115726669574}
   - component: {fileID: 3783187402739303096}
-  - component: {fileID: 7797597776653687355}
   - component: {fileID: 7538590098104596392}
   m_Layer: 5
   m_Name: GcharacterInformationDisplay
@@ -199,18 +198,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7797597776653687355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6096978347785938715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd76e0ffe0204e4c820838174bf63f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7538590098104596392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +210,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999883230667e46b19f2724b530d3833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gCharacter: {fileID: 0}
+  GCharacter:
+    blueprint: {fileID: 0}
+    name: 
+    currentHp: 0
+    maxHp: 0
+    gClass:
+      name: 
+    icon: {fileID: 0}
+    StartingEquipment: []
+    EquipmentSlotSet: []
 --- !u!1 &6096978348645439513
 GameObject:
   m_ObjectHideFlags: 0

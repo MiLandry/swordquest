@@ -30,6 +30,14 @@ public class NewPartyDisplay : MonoBehaviour
         PartyService partyService = Object.FindObjectOfType<PartyService>();
         partyService.PartyName = PartyName;
         partyService.PartyMembers = PartyMembers;
+
+        foreach (GCharacter gCharacter in PartyMembers)
+        {
+          gCharacter.Initialize();
+        }
+
+// todo, Initialize the party members
+        
         Game game = Object.FindObjectOfType<Game>();
         game.LoadLevel("Strategic");
 

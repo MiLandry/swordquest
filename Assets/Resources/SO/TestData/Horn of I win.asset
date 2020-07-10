@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf4aafb5848b7f4c8e319062846d788, type: 3}
   m_Name: Horn of I win
   m_EditorClassIdentifier: 
-  name: Horn of I win
-  icon: {fileID: 21300000, guid: 883b871fd1d51454a8c429b085190938, type: 3}
-  tier: 8
+  Name: Me so horny
+  Icon: {fileID: 21300000, guid: a3a12345f79c6fb40a4b6462fe21bffa, type: 3}
+  Tier: 0
   sortRank: 5
