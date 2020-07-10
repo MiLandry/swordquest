@@ -42,7 +42,7 @@ public class GCharacter
   private void Equip(Equipment equipment)
   {
     Debug.Log("equipping a thing" + equipment);
-    // EquipmentSlotSet[0].Equipment = equipment;
+    EquipmentSlotSet[0].Equipment = equipment;
 
   }
 
