@@ -26,7 +26,7 @@ public class GCharacter
   //custom method for manual initialization/reset
   public void Initialize()
   {
-    Debug.Log("Initializing/(/)ing new character");
+    Debug.Log("Initializing()ing new character");
     //TODO drive slots based off fields
     //EquipmentSlotSet.Add(new MainHandSlot());
     EquipmentSlotSet.Add(new MainHandSlot());
