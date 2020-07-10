@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class EquipmentSlot : MonoBehaviour
+public class EquipmentSlot
 {
     /// <summary>
     /// TBD
@@ -17,10 +17,12 @@ public class EquipmentSlot : MonoBehaviour
         if (Equipment == null)
         {
             Debug.LogError("I dont know what to do here");
-            return null;
+            return Resources.Load<Sprite>("Icons/Error");
         }
 
         return Equipment.Icon;
     }
+
+    
 
 }

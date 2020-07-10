@@ -23,9 +23,10 @@ public class EquipmentDisplay : MonoBehaviour
         if (Equipment == null)
         {
             //load a herring as a default
-            Equipment =
-                Resources.Load<Equipment>("TestData/Herring");
+            // Equipment =
+            //     Resources.Load<Equipment>("TestData/Herring");
         }
+
         this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = Equipment.Name;
         this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = Equipment.Icon;
 
@@ -36,11 +37,10 @@ public class EquipmentDisplay : MonoBehaviour
 
     public static event OnEquipmentClickedHandler OnEquipmentClicked;
 
-    public void OnInventoryItemClicked()
-    {
-        Debug.Log("Event EquipmentClicked Raised" + "equipment: " + Equipment.name);
-        OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment, Index));
-
-    }
+    // public void OnInventoryItemClicked()
+    // {
+    //     Debug.Log("Event EquipmentClicked Raised" + "equipment: " + Equipment.name);
+    //     OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment, Index));
+    // }
 }
 

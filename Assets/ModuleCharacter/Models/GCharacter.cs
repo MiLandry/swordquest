@@ -6,7 +6,6 @@ using UnityEngine;
 [Serializable]
 public class GCharacter
 {
-     
 
   public GCharacter_SO blueprint;
 
@@ -19,16 +18,31 @@ public class GCharacter
   // public int OffHandSlots;
   // public int TorsoSlots;
 
-  public List<Equipment> EquipmentSet;
+  public List<Equipment_SO> StartingEquipment;
   public List<EquipmentSlot> EquipmentSlotSet;
-  public List<EquipmentSlot_SO> EquipmentSlotEsOhSet;
 
-  void awake()
+
+
+  //custom method for manual initialization/reset
+  public void Initialize()
   {
-    Debug.Log("initializing new character");
+    Debug.Log("Initializing/(/)ing new character");
     //TODO drive slots based off fields
+    //EquipmentSlotSet.Add(new MainHandSlot());
     EquipmentSlotSet.Add(new MainHandSlot());
-    // EquipmentSlotSet.Add(new MainHandSlot());
+    EquipmentSlotSet.Add(new OffHandSlot());
+    
+    foreach (Equipment_SO equipment_SO in StartingEquipment)
+    {
+      Equipment equipment = new Equipment(equipment_SO);
+      Equip(equipment);
+    }
+  }
+
+  private void Equip(Equipment equipment)
+  {
+    Debug.Log("equipping a thing" + equipment);
+    // EquipmentSlotSet[0].Equipment = equipment;
 
   }
 

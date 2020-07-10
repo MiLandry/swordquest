@@ -9,10 +9,21 @@ public class MainHandSlot : EquipmentSlot
         if (Equipment == null)
         {
             Debug.Log("loading empty hand icon");
-            return null;
+            return Resources.Load<Sprite>("Icons/Hand");
         }
 
         return Equipment.Icon;
     }
 
-}
+    //  public override string GetName()
+    // {
+    //     if (Equipment == null)
+    //     {
+    //         Debug.Log("loading empty hand icon");
+    //         return Resources.Load<Sprite>("Icons/Hand");
+    //     }
+
+    //     return Equipment.Icon;
+    // }
+
+}  

@@ -1,50 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1784401864781024023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 686552003129106189}
-  - component: {fileID: 3306579919519462146}
-  m_Layer: 0
-  m_Name: EmptyMainHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &686552003129106189
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784401864781024023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2009218901679414816}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3306579919519462146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784401864781024023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2dd867f47ae9b540b621d194bfedf54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortRank: 0
-  Equipment: {fileID: 0}
 --- !u!1 &7983731652248178672
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,9 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 177.2652, y: 332.2633, z: -34.516125}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 686552003129106189}
-  - {fileID: 3896165225697048690}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,11 +81,8 @@ MonoBehaviour:
     gClass:
       name: 
     icon: {fileID: 0}
-    EquipmentSet: []
+    StartingEquipment: []
     EquipmentSlotSet: []
-    EquipmentSlotEsOhSet: []
-  EquipmentSet: []
-  Inventory: []
 --- !u!114 &7093169333155234224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,22 +96,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PartyMembers:
-  - blueprint: {fileID: 0}
+  - blueprint: {fileID: 11400000, guid: 17d405611e05585469da4f01b9391bd6, type: 2}
     name: Frodo
     currentHp: 2
     maxHp: 4
     gClass:
       name: Thief
     icon: {fileID: 21300000, guid: c1e671d289f279b4ca8ad1b3f0476b11, type: 3}
-    EquipmentSet:
-    - {fileID: 11400000, guid: 0bd4757ad1b157c45b3b4afc4837ff11, type: 2}
-    - {fileID: 11400000, guid: 861efc15ecb774f3c976283e7eab4a82, type: 2}
-    - {fileID: 11400000, guid: 56af4abd6b9924d14ba5455315593d5b, type: 2}
-    EquipmentSlotSet:
-    - {fileID: 3306579919519462146}
-    - {fileID: 6195399152151043129}
-    EquipmentSlotEsOhSet:
-    - {fileID: 11400000, guid: 3a377279b1b23464ea0a79abbb4277a0, type: 2}
+    StartingEquipment:
+    - {fileID: 11400000, guid: a51da1f10cf800045bfdc3f96664ac70, type: 2}
+    EquipmentSlotSet: []
   PartyName: the heroic testing party
   GCharacter:
     blueprint: {fileID: 0}
@@ -171,57 +115,5 @@ MonoBehaviour:
     gClass:
       name: warrior
     icon: {fileID: 21300000, guid: 9fd1138f967f64a9da90c96dd7b44e52, type: 3}
-    EquipmentSet: []
-    EquipmentSlotSet:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    EquipmentSlotEsOhSet: []
-  Inventory:
-  - {fileID: 11400000, guid: 2507a05e380e34001a5ad18ecbcf7738, type: 2}
-  - {fileID: 11400000, guid: 861efc15ecb774f3c976283e7eab4a82, type: 2}
---- !u!1 &8637838998943951470
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3896165225697048690}
-  - component: {fileID: 6195399152151043129}
-  m_Layer: 0
-  m_Name: Shield
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3896165225697048690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8637838998943951470}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4485321, y: 0.6737366, z: -0.09208298}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2009218901679414816}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6195399152151043129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8637838998943951470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e6efcc98005e48810b9dfe611ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortRank: 0
-  Equipment: {fileID: 11400000, guid: 861efc15ecb774f3c976283e7eab4a82, type: 2}
+    StartingEquipment: []
+    EquipmentSlotSet: []

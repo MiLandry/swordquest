@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Equipment : Item
 {
+    public Equipment(Equipment_SO blueprint)
+    {
+        Blueprint = blueprint;
+
+    }   
     /// <summary>
     /// When Rendering or sorting equipment, The equipment that has the highest
     /// rank will appear first.

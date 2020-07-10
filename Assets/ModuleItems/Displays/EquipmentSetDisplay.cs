@@ -26,12 +26,13 @@ public class EquipmentSetDisplay : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("start()ing EquipemntSetDisplay");
         PartyService partyService = Object.FindObjectOfType<PartyService>();
-        if (!EquipmentSet.Any())
-        {
-            // for now, this fetches the first party member equipment
-            EquipmentSet = partyService.PartyMembers[0].EquipmentSet;
-        }
+        // if (!EquipmentSet.Any())
+        // {
+        //     // for now, this fetches the first party member equipment
+        //     EquipmentSet = partyService.PartyMembers[0].EquipmentSet;
+        // }
 
                 if (!EquipmentSlotSet.Any())
         {
@@ -49,35 +50,17 @@ public class EquipmentSetDisplay : MonoBehaviour
 
     private void render()
     {
-        // GameObject layout = this.transform.GetChild(0).gameObject;
-        // //delete all equipmentDisplay game object children in the layout
-        // foreach( GameObject go in renderedEquipmentDisplays)
-        // {
-        //     Destroy(go);
-        // }
+        Debug.Log("render()ing EquipemntSetDisplay");
 
-
-        // int i = 0;
-        // foreach (Equipment equipment in EquipmentSet)
-        // {
-        //     GameObject display = Instantiate(EquipmentDisplay, new Vector3(0, 0, 0), Quaternion.identity);
-        //     display.transform.SetParent(layout.transform);
-        //     display.GetComponent<EquipmentDisplay>().Equipment = equipment;
-        //     display.GetComponent<EquipmentDisplay>().Index = i;
-        //     renderedEquipmentDisplays.Add(display);
-        //     i++;
-        // }
-
-
-
-
-
+        //Layout prefab
         GameObject layout = this.transform.GetChild(0).gameObject;
-        // //delete all equipmentDisplay game object children in the layout
-        // foreach( GameObject go in renderedEquipmentDisplays)
-        // {
-        //     Destroy(go);
-        // }
+        //delete all equipmentDisplay game object children in the layout
+        foreach( GameObject go in renderedEquipmentDisplays)
+        {
+            Destroy(go);
+        }
+
+
 
 
         int i = 0;
@@ -86,13 +69,11 @@ public class EquipmentSetDisplay : MonoBehaviour
             GameObject display = Instantiate(EquipmentSlotDisplay, new Vector3(0, 0, 0), Quaternion.identity);
             display.transform.SetParent(layout.transform);
             display.GetComponent<EquipmentSlotDisplay>().EquipmentSlot = slot;
-            // display.GetComponent<EquipmentSlotDisplay>().Index = i;
-            // renderedEquipmentDisplays.Add(display);
-            // i++;
+            display.GetComponent<EquipmentSlotDisplay>().Index = i;
+            display.GetComponent<EquipmentSlotDisplay>().Render();
+            renderedEquipmentDisplays.Add(display);
+            i++;
         }
-
-
-
 
 
 

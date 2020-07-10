@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1036439f2595e4cc5a96faef9e70c2af, type: 3}
-  m_Name: Iron Axe
+  m_Script: {fileID: 11500000, guid: cfdf37068d07a424184a594a81a851a7, type: 3}
+  m_Name: Frodo
   m_EditorClassIdentifier: 
-  name: Iron Axe
-  damage: 5
-  icon: {fileID: 21300000, guid: 7e838e588cfa3a54abe8ea22f5458286, type: 3}
-  tier: 1
+  initialName: 
+  initialStartingHp: 0
+  initialGClass:
+    name: 
+  icon: {fileID: 0}
+  StartingEquipmentSlotSet: []

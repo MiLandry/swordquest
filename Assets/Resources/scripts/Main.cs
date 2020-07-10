@@ -17,7 +17,7 @@ public class Main : MonoBehaviour
     {
         Debug.Log("Pre-scene loading...");
         Debug.Log("Pre-scene: creating main game object ...");
-        GameObject main = GameObject.Instantiate(Resources.Load("Main")) as GameObject;
+        GameObject main = GameObject.Instantiate(Resources.Load("Main")) as GameObject; // the Main Prefab
         DontDestroyOnLoad(main);
 
     }

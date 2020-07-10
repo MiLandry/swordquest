@@ -34,26 +34,30 @@ public class EquipmentSlotDisplay : MonoBehaviour
 
 
         }
+
+
+
+
+    }
+
+    public void Render()
+    {
+        Sprite icon = EquipmentSlot.GetIcon();
+        string slotName;
+
+
+        Equipment equipment = EquipmentSlot.Equipment;
+        if ( equipment == null)
         {
-            Sprite icon = EquipmentSlot.GetIcon();
-            string slotName;
 
-
-            Equipment equipment = EquipmentSlot.Equipment;
-            if ( equipment == null)
-            {
-                icon = Resources.Load<Sprite>("Icons/Elixir_4");
-                slotName = "";
-            }
-            else
-            {
-                icon =  EquipmentSlot.Equipment.Icon;
-                slotName = EquipmentSlot.Equipment.Name;
-            }
-            this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = slotName;
-            this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = icon;
+            slotName = "";
         }
-
+        else
+        {
+            slotName = EquipmentSlot.Equipment.Name;
+        }
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Text>().text = slotName;
+        this.transform.gameObject.GetComponentInChildren<UnityEngine.UI.Image>().sprite = icon;
 
     }
 

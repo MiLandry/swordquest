@@ -25,8 +25,8 @@ public class PartyService : Singleton<PartyService>
         Debug.Log("Creating PartyService...");
         base.Awake(); 
 
-        InventoryItemDisplay.OnItemSelected += EquipItem;
-        EquipmentDisplay.OnEquipmentClicked += ChangeEquipment;
+        // InventoryItemDisplay.OnItemSelected += EquipItem;
+        // EquipmentDisplay.OnEquipmentClicked += ChangeEquipment;
 
 
     }
@@ -41,6 +41,10 @@ public class PartyService : Singleton<PartyService>
         if (!PartyMembers.Any())
         {
             PartyMembers = defaultData.PartyMembers;
+            PartyMembers[0].Initialize();
+
+            // TODo make this a loop
+            
         }
         IndexOfEditedGCharacter = 0;
 
@@ -61,17 +65,17 @@ public class PartyService : Singleton<PartyService>
 
         // }
 
-        if (!Inventory.Any())
-        {
-           Inventory = defaultData.Inventory;
-        }
+        // if (!Inventory.Any())
+        // {
+        //    Inventory = defaultData.Inventory;
+        // }
     }
 
 
     override protected void OnDestroy()
     {
-        InventoryItemDisplay.OnItemSelected -= EquipItem;
-        EquipmentDisplay.OnEquipmentClicked -= ChangeEquipment;
+        // InventoryItemDisplay.OnItemSelected -= EquipItem;
+        // EquipmentDisplay.OnEquipmentClicked -= ChangeEquipment;
     }
 
     // end of boilerplate
@@ -88,33 +92,33 @@ public class PartyService : Singleton<PartyService>
     }
 
 
-    private void EquipItem(object sender, OnItemSelectedArgs e)
-    {
-        ToggleInventory();
-        var Gcharacter = PartyMembers[0];
+    // private void EquipItem(object sender, OnItemSelectedArgs e)
+    // {
+    //     ToggleInventory();
+    //     var Gcharacter = PartyMembers[0];
 
-        Debug.Log(" Equipping item...: " + e.Item.name);
-        Debug.Log("... onto Character: " + Gcharacter.name);
-        if (e.Item is Equipment equipment) {
-            Gcharacter.EquipmentSet.Add(e.Item as Equipment);
-            OnEquipmentEquippedEvent.Raise(this, new OnEquipmentEquippedArgs(e.Item as Equipment));
-        }
-    }
-
-
-
-    public void EquipItem(GCharacter_SO gCharacter, Equipment newItem, int indexOfEquipmentSet)
-    {
-        //GCharacter_SO oldCharacter = Party.gCharacters.Find(gCharacter);
-        //GCharacter_SO character = Party.gCharacters.Find(c => c.Equals(gCharacter));
+    //     Debug.Log(" Equipping item...: " + e.Item.name);
+    //     Debug.Log("... onto Character: " + Gcharacter.name);
+    //     if (e.Item is Equipment equipment) {
+    //         Gcharacter.EquipmentSet.Add(e.Item as Equipment);
+    //         OnEquipmentEquippedEvent.Raise(this, new OnEquipmentEquippedArgs(e.Item as Equipment));
+    //     }
+    // }
 
 
 
-        // character.equipmentSet[indexOfEquipmentSet] = newItem;
-        // update the character equipement set , add the existing equipemnt
-        //to the party inventory, and remove the equipment from the party inventory
+    // public void EquipItem(GCharacter_SO gCharacter, Equipment newItem, int indexOfEquipmentSet)
+    // {
+    //     //GCharacter_SO oldCharacter = Party.gCharacters.Find(gCharacter);
+    //     //GCharacter_SO character = Party.gCharacters.Find(c => c.Equals(gCharacter));
 
-    }
+
+
+    //     // character.equipmentSet[indexOfEquipmentSet] = newItem;
+    //     // update the character equipement set , add the existing equipemnt
+    //     //to the party inventory, and remove the equipment from the party inventory
+
+    // }
 
 
 

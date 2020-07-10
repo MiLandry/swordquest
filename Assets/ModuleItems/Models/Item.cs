@@ -3,10 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item
 {
-    public new string Name;
-    public Sprite Icon;
+    public Item()
+    {
+        
+    }
+    public Item(Item_SO blueprint)
+    {
+        Blueprint = blueprint;
+
+    }   
+
+    public string Name
+    {get{return Blueprint.Name;}}
+    public Sprite Icon
+    {get{return Blueprint.Icon;}}
     public int Tier;
+    public Item_SO Blueprint;
 
 }

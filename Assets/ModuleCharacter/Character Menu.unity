@@ -1022,6 +1022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EquipmentSlotDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 4847513605612309040, guid: 7c8f7e8e68d0baa40b568d9a31396fdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c8f7e8e68d0baa40b568d9a31396fdd, type: 3}
 --- !u!224 &3343417138012926758 stripped
