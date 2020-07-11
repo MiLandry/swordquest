@@ -321,6 +321,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyMembers.Array.data[0].StartingEquipment.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a8c1bd4b8637ae499ae5b7e6329f77e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477a6644592cabe44aed75f79a6f19d3, type: 3}
 --- !u!224 &716727558 stripped
@@ -647,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyName
+      value: Wizard party
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477a6644592cabe44aed75f79a6f19d3, type: 3}

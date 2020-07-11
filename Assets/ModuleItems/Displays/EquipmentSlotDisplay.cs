@@ -6,12 +6,12 @@ using UnityEngine;
 //TODO add logic to show a placeholder icon if there is nothing equipped.
 
 
-// public class OnEquipmentClickedArgs
-// {
-//     public OnEquipmentClickedArgs(Equipment equipment, int index) { Equipment = equipment; Index = index; }
-//     public Equipment Equipment { get; }
-//     public int Index { get; }
-// }
+public class OnEquipmentClickedArgs
+{
+    public OnEquipmentClickedArgs(EquipmentSlot equipment, int index) { EquipmentSlot = equipment; Index = index; }
+    public EquipmentSlot EquipmentSlot { get; }
+    public int Index { get; }
+}
 
 
 
@@ -62,15 +62,15 @@ public class EquipmentSlotDisplay : MonoBehaviour
     }
 
 
-    // public delegate void OnEquipmentClickedHandler(object sender, OnEquipmentClickedArgs e);
+    public delegate void OnEquipmentClickedHandler(object sender, OnEquipmentClickedArgs e);
 
-    // public static event OnEquipmentClickedHandler OnEquipmentClicked;
+    public static event OnEquipmentClickedHandler OnEquipmentClicked;
 
-    // public void OnInventoryItemClicked()
-    // {
-    //     Debug.Log("Event EquipmentClicked Raised" + "equipment: " + Equipment.name);
-    //     OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(Equipment, Index));
+    public void OnInventoryItemClicked()
+    {
+        Debug.Log("Event EquipmentClicked Raised" + "equipment: " + EquipmentSlot.GetName());
+        OnEquipmentClicked?.Invoke(this, new OnEquipmentClickedArgs(EquipmentSlot, Index));
 
-    // }
+    }
 }
 
