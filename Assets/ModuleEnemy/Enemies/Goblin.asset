@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   Name: Goblin
-  initialStartingHp: 10
-  icon: {fileID: 21300000, guid: 8e323794e10283842be251fbfc3b9325, type: 3}
+  InitialStartingHp: 0
+  Icon: {fileID: 21300000, guid: 8e323794e10283842be251fbfc3b9325, type: 3}

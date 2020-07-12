@@ -4,43 +4,50 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //gets used to show the high level summary of the party during the strategic displays
-public class EnemyPartyDisplay : MonoBehaviour
+public class PartyDisplay : MonoBehaviour
 {
-    public List<Enemy> Enemies;
+
+    public List<GCharacter> GCharacters;
     public GameObject ElementDisplay;
     private List<GameObject> renderedDisplays = new List<GameObject>();
+
 
     void Start()
     {
 
-        EnemyService EnemyService = UnityEngine.Object.FindObjectOfType<EnemyService>();
-        Debug.Log("starting Enemy party");
-        Enemies = EnemyService.Enemies;
+        PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
+        Debug.Log("Start() for PartyDisplay: " +  partyService.PartyName);
+        GCharacters = partyService.PartyMembers;
         Render();
+
+
     }
+
 
     public void Render()
     {
-        Debug.Log("render()ing EnemyPartyDisplay");
+        Debug.Log("render()ing PartyDisplay");
         //delete all equipmentDisplay game object children in the layout
         foreach( GameObject go in renderedDisplays)
         {
             Destroy(go);
         }
 
-        //Layout prefab
-        GameObject layout = this.transform.GetChild(0).gameObject;
+        Transform layoutGroup = this.transform.Find("Layout");
         int i = 0;
-        foreach (Enemy enemy in Enemies)
+        foreach (GCharacter gChar in GCharacters)
         {
             GameObject display = Instantiate(ElementDisplay, new Vector3(0, 0, 0), Quaternion.identity);
-            display.transform.SetParent(layout.transform);
+            display.transform.SetParent(layoutGroup);
             //TODO maybe use generic typing here
-            display.GetComponent<EnemyDisplay>().Enemy = enemy;
+            display.GetComponent<GCharacterDisplay>().GCharacter = gChar;
             // display.GetComponent<EnemyDisplay>().Index = i;
-            display.GetComponent<EnemyDisplay>().Render();
+            display.GetComponent<GCharacterDisplay>().Render();
             renderedDisplays.Add(display);
             i++;
         }
     }
+
+
+
 }

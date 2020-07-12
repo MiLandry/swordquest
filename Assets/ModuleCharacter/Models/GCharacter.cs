@@ -7,17 +7,21 @@ using UnityEngine;
 public class GCharacter
 {
 
-  public GCharacter_SO blueprint;
+  public GCharacter_SO Blueprint;
   public string Id = Guid.NewGuid().ToString();
 
-  public string name;
-  public int currentHp;
+  public string Name;
+  public int CurrentHp;
   public int maxHp;
   public GClass gClass;
   public Sprite icon;
   // public int MainHandSlots;
   // public int OffHandSlots;
   // public int TorsoSlots;
+
+      public Sprite Icon
+    { get {return Blueprint.Icon;}}
+
 
   public List<Equipment_SO> StartingEquipment;
   public List<EquipmentSlot> EquipmentSlotSet;
@@ -27,7 +31,7 @@ public class GCharacter
   //custom method for manual initialization/reset
   public void Initialize()
   {
-    Debug.Log("Initializing()ing new character" + name);
+    Debug.Log("Initializing()ing new character" + Name);
     //TODO drive slots based off fields
     //EquipmentSlotSet.Add(new MainHandSlot());
     EquipmentSlotSet.Add(new MainHandSlot());

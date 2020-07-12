@@ -76,13 +76,13 @@ MonoBehaviour:
   IndexOfEditedGCharacter: 0
   activeGCharacter: 
   GCharacter:
-    blueprint: {fileID: 0}
+    Blueprint: {fileID: 0}
     Id: 3cabd3f1-a66d-4e64-91a1-bc58786113e5
-    name: 
-    currentHp: 0
+    Name: 
+    CurrentHp: 0
     maxHp: 0
     gClass:
-      name: 
+      Name: 
     icon: {fileID: 0}
     StartingEquipment: []
     EquipmentSlotSet: []
@@ -100,13 +100,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PartyMembers:
-  - blueprint: {fileID: 11400000, guid: 17d405611e05585469da4f01b9391bd6, type: 2}
+  - Blueprint: {fileID: 11400000, guid: 17d405611e05585469da4f01b9391bd6, type: 2}
     Id: fc3cad66-cc2c-465f-aaa6-4deeb2a47d0c
-    name: Frodo
-    currentHp: 2
+    Name: 
+    CurrentHp: 0
     maxHp: 4
     gClass:
-      name: Thief
+      Name: 
     icon: {fileID: 21300000, guid: c1e671d289f279b4ca8ad1b3f0476b11, type: 3}
     StartingEquipment:
     - {fileID: 11400000, guid: a51da1f10cf800045bfdc3f96664ac70, type: 2}

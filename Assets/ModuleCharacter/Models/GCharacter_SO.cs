@@ -8,10 +8,10 @@ using UnityEngine;
 public class GCharacter_SO : ScriptableObject, ISerializationCallbackReceiver
 {
 
-  public string initialName;
-  public int initialStartingHp;
-  public GClass initialGClass;
-  public Sprite icon;
+  public string InitialName;
+  public int InitialStartingHp;
+  public GClass InitialGClass;
+  public Sprite Icon;
   public List<EquipmentSlot> StartingEquipmentSlotSet;
 
   // public List<Equipment> initialEquipmentSet;
@@ -29,7 +29,7 @@ public class GCharacter_SO : ScriptableObject, ISerializationCallbackReceiver
      {
 
      }
- 
+
      public void OnAfterDeserialize()
      {
 ;

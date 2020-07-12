@@ -117,7 +117,7 @@ public class PartyService : Singleton<PartyService>
         var Gcharacter = PartyMembers[0];
 
         Debug.Log(" Equipping item...: " + e.Item.Name);
-        Debug.Log("... onto Character: " + Gcharacter.name);
+        Debug.Log("... onto Character: " + Gcharacter.Name);
         if (e.Item is Equipment) {
             // GCharacter.Equip(e.Item as Equipment);
             PartyMembers[0].Equip(e.Item as Equipment);
