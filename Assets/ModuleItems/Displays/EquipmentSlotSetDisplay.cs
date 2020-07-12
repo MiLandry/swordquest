@@ -6,7 +6,7 @@ using System.Linq;
 
 public class EquipmentSlotSetDisplay : MonoBehaviour
 {
-    
+
     public GameObject EquipmentSlotDisplay;
     public List<EquipmentSlot> EquipmentSlotSet;
     private List<GameObject> renderedEquipmentDisplays = new List<GameObject>();
@@ -26,16 +26,13 @@ public class EquipmentSlotSetDisplay : MonoBehaviour
     {
         Debug.Log("start()ing EquipemntSetDisplay");
         PartyService partyService = Object.FindObjectOfType<PartyService>();
-        // if (!EquipmentSet.Any())
-        // {
-        //     // for now, this fetches the first party member equipment
-        //     EquipmentSet = partyService.PartyMembers[0].EquipmentSet;
-        // }
+
 
                 if (!EquipmentSlotSet.Any())
         {
-            // for now, this fetches the first party member equipment
-            EquipmentSlotSet = partyService.PartyMembers[0].EquipmentSlotSet;
+            // this class will get the equipment fo the "active" character
+            EquipmentSlotSet = (!System.String.IsNullOrEmpty(partyService.activeGCharacter))
+                ? partyService.PartyMembers.Find(m => m.Id == partyService.activeGCharacter).EquipmentSlotSet : partyService.PartyMembers[0].EquipmentSlotSet;
         }
 
         //    .OrderByDescending(e => e.sortRank).ToList();
@@ -57,10 +54,6 @@ public class EquipmentSlotSetDisplay : MonoBehaviour
         {
             Destroy(go);
         }
-
-
-
-
         int i = 0;
         foreach (EquipmentSlot slot in EquipmentSlotSet)
         {
@@ -72,10 +65,6 @@ public class EquipmentSlotSetDisplay : MonoBehaviour
             renderedEquipmentDisplays.Add(display);
             i++;
         }
-
-
-
-
     }
 
 
@@ -83,7 +72,7 @@ public class EquipmentSlotSetDisplay : MonoBehaviour
      {
          Debug.Log("equipmentsetdisplay callback for OnEquipmentEquipped");
          render();
-         
+
      }
 
 

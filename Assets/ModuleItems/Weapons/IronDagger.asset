@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cad7a78e4e9948a4a9fc6f848ac9434, type: 3}
-  m_Name: MinorHealingPotion
+  m_Script: {fileID: 11500000, guid: bdf4aafb5848b7f4c8e319062846d788, type: 3}
+  m_Name: IronDagger
   m_EditorClassIdentifier: 
-  Name: Minor Healing Potion
-  Icon: {fileID: 21300000, guid: 0c7bc28f1b0a5194e99994b57cfa944d, type: 3}
+  Name: iron Dagger
+  Icon: {fileID: 21300000, guid: 7c69fdb5c4d2ab04680a4e0a24f284e4, type: 3}
   Tier: 1
+  sortRank: 100

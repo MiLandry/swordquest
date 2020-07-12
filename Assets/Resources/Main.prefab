@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6494989495978767189}
   - component: {fileID: 7481106041365129289}
   - component: {fileID: 7093169333155234224}
+  - component: {fileID: 5105084707349567103}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -73,8 +74,10 @@ MonoBehaviour:
   PartyName: 
   PartyMembers: []
   IndexOfEditedGCharacter: 0
+  activeGCharacter: 
   GCharacter:
     blueprint: {fileID: 0}
+    Id: 3cabd3f1-a66d-4e64-91a1-bc58786113e5
     name: 
     currentHp: 0
     maxHp: 0
@@ -98,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartyMembers:
   - blueprint: {fileID: 11400000, guid: 17d405611e05585469da4f01b9391bd6, type: 2}
+    Id: fc3cad66-cc2c-465f-aaa6-4deeb2a47d0c
     name: Frodo
     currentHp: 2
     maxHp: 4
@@ -108,16 +112,23 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a51da1f10cf800045bfdc3f96664ac70, type: 2}
     EquipmentSlotSet: []
   PartyName: the heroic testing party
-  GCharacter:
-    blueprint: {fileID: 0}
-    name: Conan
-    currentHp: 55
-    maxHp: 66
-    gClass:
-      name: warrior
-    icon: {fileID: 21300000, guid: 9fd1138f967f64a9da90c96dd7b44e52, type: 3}
-    StartingEquipment: []
-    EquipmentSlotSet: []
   Inventory:
-  - {fileID: 11400000, guid: 7a8c1bd4b8637ae499ae5b7e6329f77e, type: 2}
+  - {fileID: 11400000, guid: bdc7cb896760f804c9b6bf8c86b9d9a1, type: 2}
   - {fileID: 11400000, guid: b87c88a87c3cea146869e3b8787f013d, type: 2}
+  Enemies:
+  - Blueprint: {fileID: 11400000, guid: a7efdd7254074824993be16aeb137178, type: 2}
+    Id: 
+    currentHp: 10
+--- !u!114 &5105084707349567103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983731652248178672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3460af32d0785594cacb6dfabb88ecae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies: []

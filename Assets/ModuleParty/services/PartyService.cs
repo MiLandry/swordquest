@@ -9,9 +9,13 @@ using System.Linq;
 //      PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
 public class PartyService : Singleton<PartyService>
 {
+    Game game;
+
     public string PartyName;
     public List<GCharacter> PartyMembers;
     public int IndexOfEditedGCharacter;
+
+    public string activeGCharacter;
 
     //only for testing/prototyping really
     public GCharacter GCharacter;
@@ -23,7 +27,8 @@ public class PartyService : Singleton<PartyService>
     override protected void Awake()
     {
         Debug.Log("Creating PartyService...");
-        base.Awake(); 
+        base.Awake();
+        game = UnityEngine.Object.FindObjectOfType<Game>();
 
         InventoryItemDisplay.OnItemSelected += EquipItem;
         EquipmentSlotDisplay.OnEquipmentClicked += ChangeEquipment;
@@ -50,11 +55,6 @@ public class PartyService : Singleton<PartyService>
         if (String.IsNullOrEmpty(PartyName))
         {
             PartyName = defaultData.PartyName;
-        }
-
-        if (String.IsNullOrEmpty(GCharacter.name))
-        {
-            GCharacter = defaultData.GCharacter;
         }
 
 
@@ -163,5 +163,15 @@ public class PartyService : Singleton<PartyService>
         {
             Debug.LogWarning("trying to open the inventory panel but none is present in the scene.");
         }
+    }
+
+    public void EditCharacter(string gCharacterId)
+    {
+        Debug.Log("editich character... ");
+        Debug.Log("gCharacterId" + gCharacterId);
+        activeGCharacter = gCharacterId;
+        game = UnityEngine.Object.FindObjectOfType<Game>();
+        game.LoadLevel("Character Menu");
+
     }
 }

@@ -21,12 +21,7 @@ public class GCharacterInformationDisplay : MonoBehaviour
             GCharacter = partyService.PartyMembers[0];
         }
 
-
-     
-
         Debug.Log("Creating GCharactir Information Display : " + GCharacter.name);
-
-
         this.transform.Find("Hero name").gameObject.GetComponent<UnityEngine.UI.Text>().text = GCharacter.name;
         this.transform.Find("hp").gameObject.GetComponent<UnityEngine.UI.Text>().text = "HP: " + GCharacter.currentHp.ToString();
         this.transform.Find("gclass").gameObject.GetComponent<UnityEngine.UI.Text>().text = GCharacter.gClass.name;
@@ -34,7 +29,14 @@ public class GCharacterInformationDisplay : MonoBehaviour
 
     }
 
+    public void OnClick()
+    {
+        Debug.Log("Character info display clicked");
+        //Open character editor for this character
 
+         PartyService partyService = UnityEngine.Object.FindObjectOfType<PartyService>();
+        partyService.EditCharacter(GCharacter.Id);
 
+    }
 
 }

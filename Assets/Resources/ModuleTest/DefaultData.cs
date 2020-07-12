@@ -7,8 +7,8 @@ public class DefaultData : MonoBehaviour
 
     public List<GCharacter> PartyMembers;
     public string PartyName;
-    public GCharacter GCharacter;
     public List<Item_SO> Inventory;
+    public List<Enemy> Enemies;
 
 
     void Awake()

@@ -8,6 +8,7 @@ public class GCharacter
 {
 
   public GCharacter_SO blueprint;
+  public string Id = Guid.NewGuid().ToString();
 
   public string name;
   public int currentHp;
@@ -31,7 +32,7 @@ public class GCharacter
     //EquipmentSlotSet.Add(new MainHandSlot());
     EquipmentSlotSet.Add(new MainHandSlot());
     EquipmentSlotSet.Add(new OffHandSlot());
-    
+
     foreach (Equipment_SO equipment_SO in StartingEquipment)
     {
       Equipment equipment = new Equipment(equipment_SO);
