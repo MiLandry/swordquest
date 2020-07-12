@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-[Serializable]
 [CreateAssetMenu(fileName = "NewHero", menuName = "GCharacter_SO")]
 public class GCharacter_SO : ScriptableObject, ISerializationCallbackReceiver
 {

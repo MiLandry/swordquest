@@ -8,10 +8,8 @@ public class DefaultData : MonoBehaviour
     public List<GCharacter> PartyMembers;
     public string PartyName;
     public GCharacter GCharacter;
-    public List<Item> Inventory;
-    // public List<Item> DefaultItems;
+    public List<Item_SO> Inventory;
 
-    //public List<Equipment> EquipmentSet;
 
     void Awake()
     {
@@ -20,9 +18,4 @@ public class DefaultData : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

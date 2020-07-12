@@ -83,6 +83,7 @@ MonoBehaviour:
     icon: {fileID: 0}
     StartingEquipment: []
     EquipmentSlotSet: []
+  Inventory: []
 --- !u!114 &7093169333155234224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,3 +118,6 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 9fd1138f967f64a9da90c96dd7b44e52, type: 3}
     StartingEquipment: []
     EquipmentSlotSet: []
+  Inventory:
+  - {fileID: 11400000, guid: 7a8c1bd4b8637ae499ae5b7e6329f77e, type: 2}
+  - {fileID: 11400000, guid: b87c88a87c3cea146869e3b8787f013d, type: 2}
