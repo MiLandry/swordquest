@@ -327,6 +327,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7a8c1bd4b8637ae499ae5b7e6329f77e,
         type: 2}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyMembers.Array.data[0].Name
+      value: JEB
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyMembers.Array.data[0].Blueprint
+      value: 
+      objectReference: {fileID: 11400000, guid: 09006a07db392a7488683fbb5f57c4f0,
+        type: 2}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyMembers.Array.data[0].CurrentHp
+      value: 654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017688986009396935, guid: 477a6644592cabe44aed75f79a6f19d3,
+        type: 3}
+      propertyPath: PartyMembers.Array.data[0].gClass.Name
+      value: 9818861
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477a6644592cabe44aed75f79a6f19d3, type: 3}
 --- !u!224 &716727558 stripped
