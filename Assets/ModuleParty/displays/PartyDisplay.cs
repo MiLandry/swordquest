@@ -46,6 +46,9 @@ public class PartyDisplay : MonoBehaviour
             renderedDisplays.Add(display);
             i++;
         }
+
+        Transform title = this.transform.Find("PartyName");
+        title.GetComponent<UnityEngine.UI.Text>().text = "custom";
     }
 
 

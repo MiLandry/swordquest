@@ -102,11 +102,11 @@ MonoBehaviour:
   PartyMembers:
   - Blueprint: {fileID: 11400000, guid: 17d405611e05585469da4f01b9391bd6, type: 2}
     Id: fc3cad66-cc2c-465f-aaa6-4deeb2a47d0c
-    Name: 
-    CurrentHp: 0
-    maxHp: 4
+    Name: fukin frodo
+    CurrentHp: 8
+    maxHp: 10
     gClass:
-      Name: 
+      Name: 61968181
     icon: {fileID: 21300000, guid: c1e671d289f279b4ca8ad1b3f0476b11, type: 3}
     StartingEquipment:
     - {fileID: 11400000, guid: a51da1f10cf800045bfdc3f96664ac70, type: 2}
